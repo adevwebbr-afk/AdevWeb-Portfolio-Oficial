@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Adev Web - Front-end Specialist</title>
+  </head>
+  <body class="bg-black text-white font-mono scroll-smooth">
+    <!-- NAVBAR FIXA -->
+    <header
+      class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-emerald-500/30 shadow-lg shadow-emerald-500/20"
+    >
+      <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+        <img
+          src="photos/photo-marca/marca-icon-100.jpeg"
+          alt="Logo Adev Web"
+          class="w-12 rounded-lg shadow-lg shadow-emerald-500/50 hover:scale-105 transition-transform duration-300"
+        />
+
+        <nav class="hidden md:block">
+          <ul class="flex gap-8 text-lg">
+            <li
+              class="hover:text-emerald-400 transition-all duration-300 hover:scale-110"
+            >
+              <a href="#hero" class="flex items-center gap-2">
+                <i class="fas fa-home"></i> Início
+              </a>
+            </li>
+            <li
+              class="hover:text-emerald-400 transition-all duration-300 hover:scale-110"
+            >
+              <a href="#servicos" class="flex items-center gap-2">
+                <i class="fas fa-code"></i> Especialidades
+              </a>
+            </li>
+            <li
+              class="hover:text-emerald-400 transition-all duration-300 hover:scale-110"
+            >
+              <a href="#projetos" class="flex items-center gap-2">
+                <i class="fas fa-palette"></i> Projetos
+              </a>
+            </li>
+            <li
+              class="hover:text-emerald-400 transition-all duration-300 hover:scale-110"
+            >
+              <a
+                href="https://wa.me/SEUNUMERO"
+                target="_blank"
+                class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 px-4 py-2 rounded-lg transition-all duration-300"
+              >
+                <i class="fab fa-whatsapp"></i> Contato
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-900/90 via-black to-emerald-800/80 pt-20 px-6"
+    >
+      <div class="text-center max-w-4xl">
+        <h1
+          class="text-4xl sm:text-5xl lg:text-7xl font-extrabold mb-6 leading-tight"
+        >
+          Seu site em<span
+            class="text-emerald-400 bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent"
+          >
+            72 horas!</span
+          >
+        </h1>
+        <p class="text-xl sm:text-2xl text-emerald-200 mb-10 max-w-2xl mx-auto">
+          <span class="text-emerald-300 font-semibold">Interface perfeita</span>
+          e
+          <span class="text-emerald-300 font-semibold"
+            >experiência impecável</span
+          >
+          para seus usuários
+        </p>
+
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
+          <a
+            href="#servicos"
+            class="bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-xl font-bold text-white shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-400/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
+          >
+            Ver Especialidades
+          </a>
+          <a
+            href="https://wa.me/SEUNUMERO"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-2 border-emerald-500 hover:border-emerald-400 text-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-400/30 transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:bg-emerald-500/10"
+          >
+            Pedir Orçamento
+          </a>
+        </div>
+
+        <!-- Destaques Front-end -->
+        <div class="flex flex-wrap justify-center gap-8 mt-16">
+          <div class="flex items-center gap-3 text-emerald-300">
+            <div
+              class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"
+            ></div>
+            <span class="text-lg">Design Responsivo</span>
+          </div>
+          <div class="flex items-center gap-3 text-emerald-300">
+            <div
+              class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"
+            ></div>
+            <span class="text-lg">UI/UX Moderno</span>
+          </div>
+          <div class="flex items-center gap-3 text-emerald-300">
+            <div
+              class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"
+            ></div>
+            <span class="text-lg">Performance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESPECIALIDADES FRONT-END -->
+    <!-- ESPECIALIDADES FRONT-END -->
+    <section
+      id="servicos"
+      class="min-h-screen bg-black py-20 px-6 scroll-mt-20"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-4xl sm:text-5xl font-bold text-emerald-400 mb-4 text-center"
+        >
+          Especialidades Front-end
+        </h2>
+        <p class="text-xl text-emerald-200 mb-12 text-center max-w-2xl mx-auto">
+          Foco total em interface, experiência do usuário e responsividade
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Especialidade 1 -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="w-16 h-16 bg-emerald-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fab fa-html5 text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">HTML5 Semântico</h3>
+            <p class="text-emerald-200 leading-relaxed">
+              Estrutura organizada, acessível e otimizada para SEO básico.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Código limpo
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Boa acessibilidade
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> SEO on-page
+              </li>
+            </ul>
+          </div>
+
+          <!-- Especialidade 2 -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="w-16 h-16 bg-emerald-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fab fa-css3-alt text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">
+              CSS3 & TailwindCSS
+            </h3>
+            <p class="text-emerald-200 leading-relaxed">
+              Estilização moderna, layouts responsivos e desenvolvimento ágil
+              com Tailwind.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Responsividade
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Flexbox & Grid
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Animações leves
+              </li>
+            </ul>
+          </div>
+
+          <!-- Especialidade 3 -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="w-16 h-16 bg-emerald-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fab fa-js-square text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">JavaScript (DOM)</h3>
+            <p class="text-emerald-200 leading-relaxed">
+              Interatividade com JavaScript puro focado na manipulação do DOM.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Eventos
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Formulários
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Interações
+                dinâmicas
+              </li>
+            </ul>
+          </div>
+
+          <!-- Especialidade 4 -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="w-16 h-16 bg-emerald-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fab fa-wordpress text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">WordPress</h3>
+            <p class="text-emerald-200 leading-relaxed">
+              Criação e personalização de sites WordPress com foco visual.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Temas
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Customizações
+                visuais
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Sites
+                institucionais
+              </li>
+            </ul>
+          </div>
+
+          <!-- Especialidade 5 -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="w-16 h-16 bg-emerald-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-mobile-alt text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">
+              Design Responsivo
+            </h3>
+            <p class="text-emerald-200 leading-relaxed">
+              Layouts adaptáveis para mobile, tablet e desktop.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Mobile-first
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Cross-browser
+              </li>
+            </ul>
+          </div>
+
+          <!-- Especialidade 6 -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="w-16 h-16 bg-emerald-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-search text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-4 text-white">
+              SEO Básico Front-end
+            </h3>
+            <p class="text-emerald-200 leading-relaxed">
+              Boas práticas de SEO aplicadas no código e estrutura.
+            </p>
+            <ul class="mt-4 space-y-2">
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> Meta tags
+              </li>
+              <li class="flex items-center gap-2 text-emerald-300">
+                <i class="fas fa-check text-emerald-400"></i> HTML semântico
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJETOS FRONT-END -->
+    <section
+      id="projetos"
+      class="min-h-screen bg-gradient-to-b from-black to-emerald-900/30 py-20 px-6 scroll-mt-20"
+    >
+      <div class="max-w-6xl mx-auto">
+        <h2
+          class="text-4xl sm:text-5xl font-bold text-emerald-400 mb-4 text-center"
+        >
+          Projetos Front-end
+        </h2>
+        <p class="text-xl text-emerald-200 mb-12 text-center max-w-2xl mx-auto">
+          Interface, interatividade e experiência do usuário em primeiro lugar
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Projeto 1 - Landing Page -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/20 to-black border border-emerald-500/20 p-6 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl mb-4 flex items-center justify-center group-hover:from-emerald-600 group-hover:to-emerald-800 transition-all"
+            >
+              <i class="fas fa-desktop text-6xl text-white/80"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Landing Page Moderna</h3>
+            <p class="text-emerald-300 text-sm mb-4">
+              Conversão e design impactante
+            </p>
+            <div class="flex gap-2 flex-wrap">
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >HTML5</span
+              >
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >Tailwind</span
+              >
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >JavaScript</span
+              >
+            </div>
+            <button
+              title="Ver projeto"
+              class="mt-8 ml-auto flex p-1 font-bold rounded-sm w-9 bg-emerald-600 justify-center items-center hover:bg-gray-500"
+            >
+              <a href=" https://adevwebbr-afk.github.io/Lead-page-Corretor/" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-eye hover:text-black"></i
+              ></a>
+            </button>
+          </div>
+
+          <!-- Projeto 2 - Portfolio -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/20 to-black border border-emerald-500/20 p-6 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl mb-4 flex items-center justify-center group-hover:from-emerald-600 group-hover:to-emerald-800 transition-all"
+            >
+              <i class="fas fa-briefcase text-6xl text-white/80"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Site para Restaurante</h3>
+            <p class="text-emerald-300 text-sm mb-4">
+              Apresentação profissional
+            </p>
+            <div class="flex gap-2 flex-wrap">
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >HTML</span
+              >
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >CSS</span
+              >
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >JavaScrpit DOM</span
+              >
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >Tailwindcss</span
+              >
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >Responsivo</span
+              >
+            </div>
+            <button
+              title="Ver projeto"
+              class="ml-auto flex p-1 font-bold rounded-sm w-9 bg-emerald-600 justify-center items-center hover:bg-gray-500"
+            >
+              <a href=" https://andersondevjava.github.io/hamburgueria-site/"
+                target="_blank" rel="noopener noreferrer" ><i class="fas fa-eye hover:text-black"></i
+              ></a>
+            </button>
+          </div>
+
+          <!-- Projeto 3 - Dashboard -->
+          <div
+            class="bg-gradient-to-br from-emerald-900/20 to-black border border-emerald-500/20 p-6 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group"
+          >
+            <div
+              class="h-48 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl mb-4 flex items-center justify-center group-hover:from-emerald-600 group-hover:to-emerald-800 transition-all"
+            >
+              <i class="fas fa-chart-line text-6xl text-white/80"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Dashboard UI</h3>
+            <p class="text-emerald-300 text-sm mb-4">
+              Interface de dados e métricas <br>
+              <strong>Projeto conceitual / em desenvolvimento</strong>
+            </p>
+            <div class="flex gap-2 flex-wrap">
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >Next.js</span
+              >
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >Charts</span
+              >
+              <span
+                class="bg-emerald-900/50 text-emerald-300 px-3 py-1 rounded-full text-sm"
+                >UI/UX</span
+              >
+            </div>
+            <button
+              title="Ver projeto"
+              class="mt-9 ml-auto flex p-1 font-bold rounded-sm w-9 bg-emerald-600 justify-center items-center hover:bg-gray-500"
+            >
+            <a href="" target="_blank" rel="noopener noreferrer"><i class="fas fa-eye hover:text-black"></i></a>
+            </button>
+          </div>
+        </div>
+
+        <!-- Call to Action Projetos -->
+        <div class="text-center mt-16">
+          <p class="text-xl text-emerald-200 mb-8">
+            Precisa de um front-end moderno e performático?
+          </p>
+          <a
+            href="https://wa.me/SEUNUMERO"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-xl font-bold text-white shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-400/40 transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
+          >
+            <i class="fab fa-whatsapp"></i>
+            Falar sobre meu projeto
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black border-t border-emerald-500/30 py-12 px-6">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <h3 class="text-xl font-bold text-emerald-400 mb-4">Adev Web</h3>
+            <p class="text-emerald-200">
+              Especialista em desenvolvimento front-end. Interfaces modernas e
+              performáticas em 72 horas!
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-emerald-400 mb-4">
+              Foco & Expertise
+            </h3>
+            <div class="space-y-2 text-emerald-200">
+              <p>🎯 Front-end Specialist</p>
+              <p>⚡ Performance</p>
+              <p>📱 Responsive Design</p>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold text-emerald-400 mb-4">Contato</h3>
+            <div class="flex gap-4">
+              <a
+                href="https://www.instagram.com/adev.web/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-2xl text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://github.com/adevwebbr-afk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-2xl text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://wa.me/SEUNUMERO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-2xl text-emerald-400 hover:text-emerald-300 transition-colors"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-emerald-500/20 pt-8 text-center text-emerald-300"
+        >
+          <p>&copy; 2024 Adev Web - Front-end Development Specialist</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
