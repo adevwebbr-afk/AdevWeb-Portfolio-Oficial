@@ -1,283 +1,698 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="src/output.css" />
-    <meta name="google-site-verification" content="ISimBu5wyVgh7WE8uW5uTN7VPl59D2C8a_HKiHYd0KY" />    
-    <title>Adev Web - Sites Profissionais e Landing Pages</title>
-  </head>
-  <body class="bg-black text-white font-sans scroll-smooth antialiased">
-    <!-- NAVBAR FIXA -->
-    <header
-      class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-emerald-500/30 shadow-lg shadow-emerald-500/20"
-    >
-      <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
-        <img
-          src="photos/photo-marca/marca-icon-100.jpeg"
-          alt="Logo Adev Web"
-          class="w-12 rounded-lg shadow-lg shadow-emerald-500/50 hover:scale-105 transition-transform duration-300"
-        />
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADevWeb | Criação de Sites Profissionais, Landing Pages e Presença Digital</title>
+    
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Desenvolvimento de sites institucionais e landing pages de alta conversão para Advocacia, Odontologia e Beleza. Fortaleça sua marca digital com a ADevWeb.">
+    <meta name="keywords" content="criação de sites, landing pages, site para advogados, site para dentistas, site para salão de beleza, ADevWeb">
+    <meta name="author" content="ADevWeb">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ADevWeb | Presença Digital de Alto Impacto">
+    <meta property="og:description" content="Criamos sites profissionais e estratégicos para atrair novos clientes para seu negócio.">
+    <meta property="og:image" content="Adev Web full .jpg">
+    <meta property="og:url" content="https://adev-web-br.workers.dev">
 
-        <nav class="hidden md:block">
-          <ul class="flex gap-8 text-base font-medium">
-            <li class="hover:text-emerald-400 transition-all duration-300 hover:scale-105">
-              <a href="#hero" class="flex items-center gap-2">
-                <i class="fas fa-home"></i> Início
-              </a>
-            </li>
-            <li class="hover:text-emerald-400 transition-all duration-300 hover:scale-105">
-              <a href="#solucoes" class="flex items-center gap-2">
-                <i class="fas fa-lightbulb"></i> Soluções
-              </a>
-            </li>
-            <li class="hover:text-emerald-400 transition-all duration-300 hover:scale-105">
-              <a href="#projetos" class="flex items-center gap-2">
-                <i class="fas fa-folder-open"></i> Modelos
-              </a>
-            </li>
-            <li class="hover:text-emerald-400 transition-all duration-300 hover:scale-105">
-              <a href="#contato" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 px-4 py-2 rounded-lg transition-all duration-300 text-white shadow-md shadow-emerald-600/20">
-                <i class="fas fa-envelope"></i> Solicitar Orçamento
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="Adev Web full .jpg">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            military: '#4B5320',
+                            darkmilitary: '#292F16',
+                            black: '#0B0D0B',
+                            darkgray: '#171A17',
+                            softwhite: '#F5F6F2',
+                            textmuted: '#A5AAA0',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Estrutura JSON-LD para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "ADevWeb",
+      "image": "Adev Web full .jpg",
+      "telephone": "+5583986306588",
+      "url": "https://adev-web-br.workers.dev",
+      "sameAs": [
+        "https://www.instagram.com/adev.web/"
+      ],
+      "priceRange": "$$",
+      "description": "Especialistas em desenvolvimento de sites institucionais e landing pages de alta conversão para Advocacia, Odontologia e Estética."
+    }
+    </script>
+</head>
+<body class="bg-brand-black text-brand-softwhite font-sans antialiased selection:bg-brand-military selection:text-white">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-brand-black/90 backdrop-blur-md border-b border-brand-darkgray/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo com imagem e texto -->
+            <a href="#inicio" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-brand-military rounded-lg p-1">
+                <img src="photos/photo-marca/marca-icon-100.jpeg" alt="ADevWeb Logo" class="w-10 h-10 rounded-lg object-cover border border-brand-military/50 group-hover:border-brand-military transition-colors">
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold tracking-tight text-white group-hover:text-brand-softwhite transition-colors">ADev<span class="text-brand-military">Web</span></span>
+                    <span class="text-[10px] text-brand-textmuted tracking-widest uppercase">Soluções Digitais</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#inicio" class="hover:text-brand-textmuted transition-colors">Início</a>
+                <a href="#servicos" class="hover:text-brand-textmuted transition-colors">Serviços</a>
+                <a href="#projetos" class="hover:text-brand-textmuted transition-colors">Projetos</a>
+                <a href="#portfolio" class="hover:text-brand-textmuted transition-colors">Portfólio</a>
+                <a href="#avaliacoes" class="hover:text-brand-textmuted transition-colors">Avaliações</a>
+                <a href="#sobre" class="hover:text-brand-textmuted transition-colors">Sobre</a>
+                <a href="#contato" class="hover:text-brand-textmuted transition-colors">Contato</a>
+            </nav>
+
+            <!-- CTA Button Header -->
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://www.instagram.com/adev.web/" target="_blank" rel="noopener noreferrer" aria-label="Instagram ADevWeb" class="p-2 text-brand-textmuted hover:text-white transition-colors">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+                <a href="#contato" class="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-brand-military hover:bg-brand-darkmilitary border border-brand-military/60 transition-all duration-200 shadow-md hover:shadow-brand-military/20">
+                    Solicitar orçamento
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-brand-textmuted hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-military rounded-lg" aria-label="Abrir menu principal">
+                <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+                <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-darkgray/95 border-b border-brand-darkmilitary px-4 pt-4 pb-6 space-y-4 backdrop-blur-lg">
+            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-black transition-colors">Início</a>
+            <a href="#servicos" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-black transition-colors">Serviços</a>
+            <a href="#projetos" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-black transition-colors">Projetos em Destaque</a>
+            <a href="#portfolio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-black transition-colors">Portfólio por Nicho</a>
+            <a href="#avaliacoes" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-black transition-colors">Avaliações</a>
+            <a href="#sobre" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-black transition-colors">Sobre a ADevWeb</a>
+            <a href="#contato" class="mobile-link block px-3 py-2 rounded-md text-base font-medium hover:bg-brand-black transition-colors">Contato</a>
+            
+            <div class="pt-4 border-t border-brand-black flex flex-col gap-3">
+                <a href="#contato" class="mobile-link w-full text-center px-5 py-3 rounded-lg text-sm font-semibold text-white bg-brand-military hover:bg-brand-darkmilitary transition-colors">
+                    Solicitar orçamento
+                </a>
+                <a href="https://www.instagram.com/adev.web/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 py-2 text-sm text-brand-textmuted hover:text-white">
+                    <i data-lucide="instagram" class="w-4 h-4"></i> Siga no Instagram @adev.web
+                </a>
+            </div>
+        </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section
-      id="hero"
-      class="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-900/90 via-black to-emerald-800/80 pt-20 px-6"
-    >
-      <div class="text-center max-w-4xl">
-        <h1 class="text-4xl sm:text-5xl lg:text-7xl font-black mb-6 leading-tight tracking-tight text-white">
-          Seu site profissional em <span class="text-emerald-400 bg-gradient-to-r from-emerald-400 to-green-300 bg-clip-text text-transparent">72 horas!</span>
-        </h1>
-        <p class="text-lg sm:text-xl text-emerald-200/90 mb-10 max-w-2xl mx-auto font-normal leading-relaxed">
-          Criamos a estrutura digital ideal para o seu negócio se destacar na internet e <span class="text-emerald-300 font-semibold">faturar mais</span>.
-        </p>
+    <main class="pt-20">
+        <!-- HERO SECTION -->
+        <section id="inicio" class="relative min-h-[90vh] flex items-center justify-center py-16 lg:py-24 overflow-hidden border-b border-brand-darkgray/50">
+            <!-- Background Elements -->
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(75,83,32,0.15),transparent_60%)]"></div>
+            
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 text-left space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-darkmilitary/60 border border-brand-military/40 text-brand-textmuted text-xs font-medium tracking-wide">
+                        <span class="w-2 h-2 rounded-full bg-brand-military animate-pulse"></span>
+                        Soluções Web para Advocacia, Odontologia e Estética
+                    </div>
 
-        <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-          <a
-            href="#contato"
-            class="bg-emerald-600 hover:bg-emerald-500 px-8 py-4 rounded-xl font-bold text-white shadow-2xl shadow-emerald-500/30 hover:shadow-emerald-400/40 transition-all duration-300 hover:scale-105 hover:-translate-y-1 text-lg"
-          >
-            Quero Destacar Meu Negócio
-          </a>
-          <a
-            href="#solucoes"
-            class="border-2 border-emerald-500 hover:border-emerald-400 text-emerald-400 hover:text-white px-8 py-4 rounded-xl font-bold shadow-2xl shadow-emerald-500/20 hover:shadow-emerald-400/30 transition-all duration-300 hover:scale-105 hover:-translate-y-1 hover:bg-emerald-500/10 text-lg"
-          >
-            Conhecer Soluções
-          </a>
-        </div>
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+                        Seu negócio merece uma <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-brand-softwhite to-brand-military">presença digital</span> à altura.
+                    </h1>
 
-        <!-- Destaques Comerciais -->
-        <div class="flex flex-wrap justify-center gap-8 mt-16">
-          <div class="flex items-center gap-3 text-emerald-300 font-medium">
-            <div class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
-            <span>Foco em Vendas</span>
-          </div>
-          <div class="flex items-center gap-3 text-emerald-300 font-medium">
-            <div class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
-            <span>Otimizado para Celular</span>
-          </div>
-          <div class="flex items-center gap-3 text-emerald-300 font-medium">
-            <div class="w-2.5 h-2.5 bg-emerald-400 rounded-full animate-pulse"></div>
-            <span>Velocidade Máxima</span>
-          </div>
-        </div>
-      </div>
-    </section>
+                    <p class="text-base sm:text-lg text-brand-textmuted max-w-2xl font-normal leading-relaxed">
+                        Criamos sites profissionais que fortalecem sua marca, apresentam seus serviços e facilitam o contato entre sua empresa e seus próximos clientes.
+                    </p>
 
-    <!-- SOLUÇÕES E BENEFÍCIOS -->
-    <section id="solucoes" class="min-h-screen bg-black py-20 px-6 scroll-mt-20">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-emerald-400 mb-4 text-center tracking-tight">
-          O que fazemos pelo seu negócio
-        </h2>
-        <p class="text-lg text-emerald-200/80 mb-12 text-center max-w-2xl mx-auto leading-relaxed">
-          Esqueça plataformas lentas e complicadas. Entregamos soluções diretas que convertem visitantes em clientes.
-        </p>
+                    <!-- CTAs -->
+                    <div class="pt-2 flex flex-col sm:flex-row gap-4">
+                        <a id="hero-cta-primary" href="#contato" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-base font-semibold text-white bg-brand-military hover:bg-brand-darkmilitary border border-brand-military transition-all shadow-lg shadow-brand-military/20 gap-2">
+                            <span>Quero meu site profissional</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#projetos" class="inline-flex items-center justify-center px-6 py-3.5 rounded-lg text-base font-semibold text-brand-softwhite bg-brand-darkgray/80 hover:bg-brand-darkgray border border-brand-darkmilitary/60 hover:border-brand-military/40 transition-all gap-2">
+                            <span>Conhecer projetos</span>
+                            <i data-lucide="eye" class="w-4 h-4"></i>
+                        </a>
+                    </div>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Bloco 1 -->
-          <div class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group">
-            <div class="w-14 h-14 bg-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-600/20">
-              <i class="fas fa-rocket text-xl text-white"></i>
+                    <!-- Micro badges -->
+                    <div class="pt-6 border-t border-brand-darkgray/60 grid grid-cols-3 gap-4 text-xs text-brand-textmuted">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-military"></i>
+                            <span>100% Responsivo</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-military"></i>
+                            <span>Foco em Conversão</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="check-circle-2" class="w-4 h-4 text-brand-military"></i>
+                            <span>Suporte Direto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Compositions - Tech/Brand Preview -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Visual Card 1: Visual Identity Code Frame -->
+                        <div class="bg-brand-darkgray border border-brand-military rounded-xl p-3 shadow-2xl relative z-20 backdrop-blur-sm">
+                          <img src="photos/photo-marca/FotoWeb.png" alt="">
+                        </div>
+
+                        <!-- Visual Card 2: Interactive Preview Box -->
+                        <div class="bg-brand-black/90 border border-brand-darkmilitary rounded-xl p-4 shadow-xl mt-4 relative z-10 translate-x-2 -translate-y-2">
+                            <div class="flex items-center gap-3">
+                                <div class="p-2 bg-brand-military/20 border border-brand-military/40 rounded-lg text-brand-military">
+                                    <i data-lucide="layout" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-semibold text-white">Presença Digital Estratégica</p>
+                                    <p class="text-[11px] text-brand-textmuted">Arquitetura focada em gerar agendamentos</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-white tracking-tight">Landing Pages</h3>
-            <p class="text-emerald-200/90 leading-relaxed text-sm sm:text-base">
-              Páginas únicas focadas na conversão imediata de um produto ou serviço específico.
-            </p>
-            <ul class="mt-5 space-y-2.5 text-sm sm:text-base">
-              <li class="flex items-center gap-2 text-emerald-300/90"><i class="fas fa-check text-emerald-400 text-sm"></i> Botões direto para o WhatsApp</li>
-              <li class="flex items-center gap-2 text-emerald-300/90"><i class="fas fa-check text-emerald-400 text-sm"></i> Design atraente e persuasivo</li>
-            </ul>
-          </div>
+        </section>
 
-          <!-- Bloco 2 -->
-          <div class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group">
-            <div class="w-14 h-14 bg-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-600/20">
-              <i class="fas fa-list text-xl text-white"></i>
+        <!-- SEÇÃO DE CREDIBILIDADE / DIFERENCIAIS -->
+        <section class="py-12 bg-brand-darkgray/30 border-b border-brand-darkgray/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="p-5 rounded-xl bg-brand-darkgray/50 border border-brand-darkmilitary/40 hover:border-brand-military/50 transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-brand-military/20 flex items-center justify-center text-brand-military mb-4 border border-brand-military/30">
+                            <i data-lucide="smartphone" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">Design Responsivo</h3>
+                        <p class="text-xs text-brand-textmuted leading-relaxed">Navegação perfeita adaptada para celulares, tablets e computadores desktop.</p>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-brand-darkgray/50 border border-brand-darkmilitary/40 hover:border-brand-military/50 transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-brand-military/20 flex items-center justify-center text-brand-military mb-4 border border-brand-military/30">
+                            <i data-lucide="code-2" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">Desenvolvimento Sob Medida</h3>
+                        <p class="text-xs text-brand-textmuted leading-relaxed">Estrutura customizada com foco nas reais necessidades do seu segmento.</p>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-brand-darkgray/50 border border-brand-darkmilitary/40 hover:border-brand-military/50 transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-brand-military/20 flex items-center justify-center text-brand-military mb-4 border border-brand-military/30">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">Contato Facilitado</h3>
+                        <p class="text-xs text-brand-textmuted leading-relaxed">Integração imediata via WhatsApp e formulários estruturados para atração de clientes.</p>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-brand-darkgray/50 border border-brand-darkmilitary/40 hover:border-brand-military/50 transition-all">
+                        <div class="w-10 h-10 rounded-lg bg-brand-military/20 flex items-center justify-center text-brand-military mb-4 border border-brand-military/30">
+                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-base font-bold text-white mb-2">Suporte Transparente</h3>
+                        <p class="text-xs text-brand-textmuted leading-relaxed">Prazos, escopos e condições de manutenção definidos claramente desde o primeiro dia.</p>
+                    </div>
+
+                </div>
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-white tracking-tight">Catálogos Digitais</h3>
-            <p class="text-emerald-200/90 leading-relaxed text-sm sm:text-base">
-              Ideal para comércios, lojas e deliveries organizarem seus produtos de forma profissional.
-            </p>
-            <ul class="mt-5 space-y-2.5 text-sm sm:text-base">
-              <li class="flex items-center gap-2 text-emerald-300/90"><i class="fas fa-check text-emerald-400 text-sm"></i> Exposição limpa de produtos</li>
-              <li class="flex items-center gap-2 text-emerald-300/90"><i class="fas fa-check text-emerald-400 text-sm"></i> Facilidade na escolha do cliente</li>
-            </ul>
-          </div>
+        </section>
 
-          <!-- Bloco 3 -->
-          <div class="bg-gradient-to-br from-emerald-900/30 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group">
-            <div class="w-14 h-14 bg-emerald-600 rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-600/20">
-              <i class="fas fa-bolt text-xl text-white"></i>
+        <!-- SEÇÃO DE PROJETOS PRINCIPAIS -->
+        <section id="projetos" class="py-20 border-b border-brand-darkgray/50 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-military">Projetos em Destaque</h2>
+                    <p class="text-2xl sm:text-3xl font-bold text-white">Conheça Nossos Três Principais Projetos</p>
+                    <p class="text-sm text-brand-textmuted">Exemplos reais de soluções web desenvolvidas para maximizar autoridade e contatos comerciais.</p>
+                </div>
+
+                <!-- Main Featured Projects Grid -->
+                <div id="featured-projects-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Rendered dynamically by main.js -->
+                </div>
+
             </div>
-            <h3 class="text-2xl font-bold mb-4 text-white tracking-tight">Sites Ultra Rápidos</h3>
-            <p class="text-emerald-200/90 leading-relaxed text-sm sm:text-base">
-              Desenvolvidos com código otimizado para carregar instantaneamente, evitando perdas de clientes.
-            </p>
-            <ul class="mt-5 space-y-2.5 text-sm sm:text-base">
-              <li class="flex items-center gap-2 text-emerald-300/90"><i class="fas fa-check text-emerald-400 text-sm"></i> Carregamento ágil no 4G/5G</li>
-              <li class="flex items-center gap-2 text-emerald-300/90"><i class="fas fa-check text-emerald-400 text-sm"></i> Melhor pontuação no Google</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- PROJETOS / PORTFÓLIO MODELO -->
-    <section id="projetos" class="py-20 px-6 bg-gradient-to-b from-black to-emerald-900/30 scroll-mt-20">
-      <div class="max-w-6xl mx-auto">
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-emerald-400 mb-4 text-center tracking-tight">
-          Modelos e Projetos de Sucesso
-        </h2>
-        <p class="text-lg text-emerald-200/80 mb-12 text-center max-w-2xl mx-auto leading-relaxed">
-          Veja exemplos reais de estruturas criadas para trazer resultados.
-        </p>
+        <!-- SEÇÃO DE SERVIÇOS -->
+        <section id="servicos" class="py-20 bg-brand-darkgray/20 border-b border-brand-darkgray/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-military">Soluções Oferecidas</h2>
+                    <p class="text-2xl sm:text-3xl font-bold text-white">Serviços Especializados para Seu Negócio</p>
+                    <p class="text-sm text-brand-textmuted">Escolha a solução mais adequada ao momento atual da sua empresa.</p>
+                </div>
 
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <!-- Projeto 1 -->
-          <div class="bg-gradient-to-br from-emerald-900/20 to-black border border-emerald-500/20 p-6 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group">
-            <div class="h-48 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl mb-4 flex items-center justify-center group-hover:from-emerald-600 group-hover:to-emerald-800 transition-all shadow-inner">
-              <i class="fas fa-desktop text-5xl text-white/80"></i>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <!-- Serviço 1: Landing Pages -->
+                    <div class="bg-brand-darkgray/60 border border-brand-darkmilitary/60 rounded-xl p-8 flex flex-col justify-between hover:border-brand-military/60 transition-all group">
+                        <div class="space-y-6">
+                            <div class="w-12 h-12 rounded-lg bg-brand-military/20 flex items-center justify-center text-brand-military border border-brand-military/40 group-hover:bg-brand-military group-hover:text-white transition-colors">
+                                <i data-lucide="file-text" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Landing Pages</h3>
+                            <p class="text-xs text-brand-textmuted leading-relaxed">
+                                Ideal para profissionais e empresas que precisam promover ofertas pontuais, anunciar um serviço específico ou acelerar a captação de contatos.
+                            </p>
+                            
+                            <ul class="space-y-3 text-xs text-brand-softwhite">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Página única focada em conversão</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Layout 100% responsivo</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Botões e chamadas diretas para WhatsApp</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Otimização básica de SEO</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Formulário rápido de captação</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-brand-darkmilitary/50">
+                            <a href="#contato" class="service-cta block w-full py-3 text-center text-xs font-semibold rounded-lg bg-brand-darkgray hover:bg-brand-military text-white border border-brand-darkmilitary transition-colors" data-service="Landing Pages">
+                                Solicitar landing page
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 2: Sites Institucionais -->
+                    <div class="bg-brand-darkgray/60 border border-brand-military/60 rounded-xl p-8 flex flex-col justify-between hover:border-brand-military transition-all relative shadow-xl shadow-brand-military/5 group">
+                        <div class="absolute -top-3 right-6 bg-brand-military text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                            Mais Solicitado
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="w-12 h-12 rounded-lg bg-brand-military flex items-center justify-center text-white border border-brand-military group-hover:bg-brand-darkmilitary transition-colors">
+                                <i data-lucide="globe" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Sites Institucionais</h3>
+                            <p class="text-xs text-brand-textmuted leading-relaxed">
+                                Para empresas que desejam apresentar toda a sua estrutura, catálogo de serviços, corpo técnico e diferenciais com máxima autoridade.
+                            </p>
+                            
+                            <ul class="space-y-3 text-xs text-brand-softwhite">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Múltiplas seções ou navegação fluida</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Apresentação institucional completa</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Arquitetura de informação organizada</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> SEO técnico estruturado</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Integração com mapa e redes sociais</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-brand-darkmilitary/50">
+                            <a href="#contato" class="service-cta block w-full py-3 text-center text-xs font-semibold rounded-lg bg-brand-military hover:bg-brand-darkmilitary text-white transition-colors" data-service="Site Institucional">
+                                Quero um site institucional
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Serviço 3: Manutenção de Sites -->
+                    <div class="bg-brand-darkgray/60 border border-brand-darkmilitary/60 rounded-xl p-8 flex flex-col justify-between hover:border-brand-military/60 transition-all group">
+                        <div class="space-y-6">
+                            <div class="w-12 h-12 rounded-lg bg-brand-military/20 flex items-center justify-center text-brand-military border border-brand-military/40 group-hover:bg-brand-military group-hover:text-white transition-colors">
+                                <i data-lucide="wrench" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white">Manutenção de Sites</h3>
+                            <p class="text-xs text-brand-textmuted leading-relaxed">
+                                Garantia de que sua aplicação existente permaneça funcional, atualizada, segura e bem apresentada continuamente.
+                            </p>
+                            
+                            <ul class="space-y-3 text-xs text-brand-softwhite">
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Ajustes pontuais de textos e imagens</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Verificação de links e formulários</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Monitoramento de estabilidade</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Suporte dentro do limite contratado</li>
+                                <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-military"></i> Gestão de hospedagem conforme plano</li>
+                            </ul>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-brand-darkmilitary/50">
+                            <a href="#contato" class="service-cta block w-full py-3 text-center text-xs font-semibold rounded-lg bg-brand-darkgray hover:bg-brand-military text-white border border-brand-darkmilitary transition-colors" data-service="Manutenção">
+                                Solicitar manutenção
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <p class="mt-8 text-center text-[11px] text-brand-textmuted">
+                    * Hospedagem, registro de domínio e manutenções adicionais variam conforme o pacote contratado.
+                </p>
+
             </div>
-            <h3 class="text-xl font-bold mb-2 tracking-tight">Landing Page Imobiliária</h3>
-            <p class="text-emerald-300/90 text-sm mb-5 leading-relaxed">Estrutura de alta conversão focada em captação de contatos.</p>
-            <a href="https://adevwebbr-afk.github.io/Lead-page-Corretor/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-lg transition-all text-sm shadow-md shadow-emerald-600/10">
-              <i class="fas fa-eye"></i> Visualizar Modelo
-            </a>
-          </div>
+        </section>
 
-          <!-- Projeto 2 -->
-          <div class="bg-gradient-to-br from-emerald-900/20 to-black border border-emerald-500/20 p-6 rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300 group">
-            <div class="h-48 bg-gradient-to-br from-emerald-700 to-emerald-900 rounded-xl mb-4 flex items-center justify-center group-hover:from-emerald-600 group-hover:to-emerald-800 transition-all shadow-inner">
-              <i class="fas fa-hamburger text-5xl text-white/80"></i>
+        <!-- COMO FUNCIONA / PROCESSO -->
+        <section class="py-20 bg-brand-darkgray/20 border-b border-brand-darkgray/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-military">Metodologia Clara</h2>
+                    <p class="text-2xl sm:text-3xl font-bold text-white">Como Funciona Nosso Processo</p>
+                    <p class="text-sm text-brand-textmuted">Do primeiro contato até a publicação final do seu projeto no ar.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                    
+                    <!-- Passo 1 -->
+                    <div class="bg-brand-darkgray/40 border border-brand-darkmilitary/50 rounded-xl p-6 relative space-y-4">
+                        <span class="text-3xl font-extrabold text-brand-military/60">01</span>
+                        <h3 class="text-base font-bold text-white">Conversa Inicial</h3>
+                        <p class="text-xs text-brand-textmuted leading-relaxed">
+                            Entendemos os objetivos da sua empresa, seu público-alvo, identidade e as principais necessidades comerciais.
+                        </p>
+                    </div>
+
+                    <!-- Passo 2 -->
+                    <div class="bg-brand-darkgray/40 border border-brand-darkmilitary/50 rounded-xl p-6 relative space-y-4">
+                        <span class="text-3xl font-extrabold text-brand-military/60">02</span>
+                        <h3 class="text-base font-bold text-white">Planejamento</h3>
+                        <p class="text-xs text-brand-textmuted leading-relaxed">
+                            Definimos a estrutura visual, distribuição dos conteúdos, prazo de entrega e orçamento sem surpresas.
+                        </p>
+                    </div>
+
+                    <!-- Passo 3 -->
+                    <div class="bg-brand-darkgray/40 border border-brand-darkmilitary/50 rounded-xl p-6 relative space-y-4">
+                        <span class="text-3xl font-extrabold text-brand-military/60">03</span>
+                        <h3 class="text-base font-bold text-white">Desenvolvimento</h3>
+                        <p class="text-xs text-brand-textmuted leading-relaxed">
+                            Construímos seu site focado em velocidade, responsividade e enviamos o pré-link para sua validação.
+                        </p>
+                    </div>
+
+                    <!-- Passo 4 -->
+                    <div class="bg-brand-darkgray/40 border border-brand-darkmilitary/50 rounded-xl p-6 relative space-y-4">
+                        <span class="text-3xl font-extrabold text-brand-military/60">04</span>
+                        <h3 class="text-base font-bold text-white">Publicação</h3>
+                        <p class="text-xs text-brand-textmuted leading-relaxed">
+                            Executamos os testes finais, configuramos o seu domínio e orientamos sobre como divulgar seu novo site.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
-            <h3 class="text-xl font-bold mb-2 tracking-tight">Catálogo de Hamburgueria</h3>
-            <p class="text-emerald-300/90 text-sm mb-5 leading-relaxed">Cardápio interativo desenhado para acelerar pedidos via WhatsApp.</p>
-            <a href="https://andersondevjava.github.io/hamburgueria-site/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-5 py-2.5 rounded-lg transition-all text-sm shadow-md shadow-emerald-600/10">
-              <i class="fas fa-eye"></i> Visualizar Modelo
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- SEÇÃO DE CONTATO COM FORMULÁRIO -->
-    <section id="contato" class="py-20 px-6 bg-black border-t border-emerald-500/10 scroll-mt-20">
-      <div class="max-w-2xl mx-auto">
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-emerald-400 mb-4 text-center tracking-tight">
-          Pronto para começar?
-        </h2>
-        <p class="text-lg text-emerald-200/80 mb-10 text-center leading-relaxed">
-          Preencha os dados abaixo e receba um orçamento personalizado para o seu negócio ainda hoje.
-        </p>
+        <!-- SEÇÃO DE AVALIAÇÕES (FAKE TESTIMONIALS) -->
+        <section id="avaliacoes" class="py-20 border-b border-brand-darkgray/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-military">Depoimentos</h2>
+                    <p class="text-2xl sm:text-3xl font-bold text-white">O Que Dizem Nossos Clientes</p>
+                    <p class="text-sm text-brand-textmuted">Veja como ajudamos profissionais de advocacia, odontologia e estética a fortalecerem sua presença digital.</p>
+                </div>
 
-        <!-- Formulário integrado com FormSubmit -->
-        <form id="whatsappForm" class="space-y-6 bg-gradient-to-br from-emerald-900/10 to-black border border-emerald-500/30 p-8 rounded-2xl shadow-2xl">          <input type="hidden" name="_captcha" value="false">
-          
-          <div>
-            <label class="block text-emerald-400 font-bold mb-2 text-sm tracking-wide uppercase" for="name">Seu Nome / Nome da Empresa</label>
-            <input class="w-full bg-black border border-emerald-500/40 rounded-xl p-4 text-white focus:outline-none focus:border-emerald-400 transition-all text-base placeholder:text-zinc-600" type="text" name="name" id="name" placeholder="Ex: João da Silva / Loja do Perfume" required />
-          </div>
+                <!-- Testimonials Grid Container -->
+                <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Dynamic rendering by main.js -->
+                </div>
 
-          <div>
-            <label class="block text-emerald-400 font-bold mb-2 text-sm tracking-wide uppercase" for="whatsapp">WhatsApp de Contato</label>
-            <input class="w-full bg-black border border-emerald-500/40 rounded-xl p-4 text-white focus:outline-none focus:border-emerald-400 transition-all text-base placeholder:text-zinc-600" type="tel" name="whatsapp" id="whatsapp" placeholder="Ex: (83) 99999-9999" required />
-          </div>
+            </div>
+        </section>
 
-          <div>
-            <label class="block text-emerald-400 font-bold mb-2 text-sm tracking-wide uppercase" for="service">Qual solução você precisa?</label>
-            <select class="w-full bg-black border border-emerald-500/40 rounded-xl p-4 text-emerald-300 focus:outline-none focus:border-emerald-400 transition-all text-base appearance-none cursor-pointer" name="service" id="service" required>
-              <option value="" disabled selected class="text-zinc-600">Selecione uma opção...</option>
-              <option value="landing-page" class="bg-zinc-950 text-white">Landing Page de Alta Conversão</option>
-              <option value="catalogo" class="bg-zinc-950 text-white">Catálogo Digital para Produtos</option>
-              <option value="site-rapido" class="bg-zinc-950 text-white">Site Rápido Institucional</option>
-              <option value="outro" class="bg-zinc-950 text-white">Outro Projeto Sob Medida</option>
-            </select>
-          </div>
+        <!-- SEÇÃO SOBRE A ADEVWEB -->
+        <section id="sobre" class="py-20 bg-brand-darkgray/20 border-b border-brand-darkgray/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-darkmilitary/50 border border-brand-military/40 text-brand-textmuted text-xs">
+                            <i data-lucide="info" class="w-3.5 h-3.5 text-brand-military"></i> Sobre a ADevWeb
+                        </div>
+                        <h2 class="text-2xl sm:text-3xl font-bold text-white">Foco em Desenvolvimento Web voltado para Resultados Reais</h2>
+                        <p class="text-sm text-brand-textmuted leading-relaxed">
+                            A <strong class="text-white">ADevWeb</strong> nasceu com o compromisso de oferecer soluções digitais acessíveis, elegantes e altamente eficientes. Compreendemos a realidade de escritórios de advocacia, clínicas odontológicas e espaços de beleza.
+                        </p>
+                        <p class="text-sm text-brand-textmuted leading-relaxed">
+                            Não entregamos apenas códigos; criamos uma ferramenta comercial pronta para ser divulgada no Instagram, Google e diretamente via WhatsApp.
+                        </p>
 
-          <div>
-            <label class="block text-emerald-400 font-bold mb-2 text-sm tracking-wide uppercase" for="message">Fale brevemente sobre o seu negócio (Opcional)</label>
-            <textarea class="w-full bg-black border border-emerald-500/40 rounded-xl p-4 text-white focus:outline-none focus:border-emerald-400 transition-all text-base h-32 placeholder:text-zinc-600 resize-none" name="message" id="message" placeholder="Conte o que vende e qual seu principal objetivo com o site..."></textarea>
-          </div>
+                        <div class="grid grid-cols-2 gap-4 pt-4">
+                            <div class="border-l-2 border-brand-military pl-4">
+                                <span class="block text-xl font-extrabold text-white">3 Nichos</span>
+                                <span class="text-xs text-brand-textmuted">Atuação especializada</span>
+                            </div>
+                            <div class="border-l-2 border-brand-military pl-4">
+                                <span class="block text-xl font-extrabold text-white">100% Direto</span>
+                                <span class="text-xs text-brand-textmuted">WhatsApp e contatos diretos</span>
+                            </div>
+                        </div>
+                    </div>
 
-          <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl shadow-xl shadow-emerald-500/20 hover:shadow-emerald-400/30 transition-all duration-300 hover:scale-[1.01] text-base tracking-medium">
-            Enviar e Solicitar Orçamento
-          </button>
-        </form>
-      </div>
-    </section>
+                    <div class="lg:col-span-6">
+                        <div class="bg-brand-darkgray border border-brand-darkmilitary rounded-2xl p-8 space-y-6">
+                            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                                <i data-lucide="target" class="w-5 h-5 text-brand-military"></i> Compromisso Comercial
+                            </h3>
+                            <p class="text-xs text-brand-textmuted leading-relaxed">
+                                Acreditamos em parcerias pautadas pela transparência. Nosso compromisso é entregar exatamente o que foi planejado, no prazo alinhado e com a identidade que seu negócio exige para se destacar na internet.
+                            </p>
+
+                            <div class="space-y-3 pt-2">
+                                <div class="flex items-center gap-3 text-xs text-white">
+                                    <div class="w-6 h-6 rounded bg-brand-military/20 flex items-center justify-center text-brand-military">
+                                        <i data-lucide="check" class="w-4 h-4"></i>
+                                    </div>
+                                    <span>Comunicação transparente durante todo o desenvolvimento</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-xs text-white">
+                                    <div class="w-6 h-6 rounded bg-brand-military/20 flex items-center justify-center text-brand-military">
+                                        <i data-lucide="check" class="w-4 h-4"></i>
+                                    </div>
+                                    <span>Prazos realistas e cumprimento de prazos acertados</span>
+                                </div>
+                                <div class="flex items-center gap-3 text-xs text-white">
+                                    <div class="w-6 h-6 rounded bg-brand-military/20 flex items-center justify-center text-brand-military">
+                                        <i data-lucide="check" class="w-4 h-4"></i>
+                                    </div>
+                                    <span>Acompanhamento no pós-lançamento</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULÁRIO DE CONTATO / ORÇAMENTO -->
+        <section id="contato" class="py-20 relative">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                
+                <div class="text-center mb-12 space-y-4">
+                    <h2 class="text-xs font-semibold uppercase tracking-widest text-brand-military">Contato Direto</h2>
+                    <p class="text-2xl sm:text-3xl font-bold text-white">Vamos construir sua presença digital?</p>
+                    <p class="text-sm text-brand-textmuted max-w-2xl mx-auto">
+                        Conte um pouco sobre seu negócio e o que você precisa. Vamos avaliar sua necessidade e retornar o contato rapidamente.
+                    </p>
+                </div>
+
+                <div class="bg-brand-darkgray/90 border border-brand-darkmilitary rounded-2xl p-6 sm:p-10 shadow-2xl backdrop-blur-sm">
+                    <form id="lead-form" class="space-y-6">
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Nome -->
+                            <div>
+                                <label for="name" class="block text-xs font-medium text-white mb-2">Seu nome *</label>
+                                <input type="text" id="name" name="name" required placeholder="Ex: Dr. Roberto ou Ana Silva" class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white placeholder-brand-textmuted/50 focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors">
+                                <span class="text-[10px] text-red-400 hidden error-msg" id="name-error">Por favor, informe seu nome.</span>
+                            </div>
+
+                            <!-- Empresa/Profissional -->
+                            <div>
+                                <label for="company" class="block text-xs font-medium text-white mb-2">Nome da empresa ou consultório</label>
+                                <input type="text" id="company" name="company" placeholder="Ex: Silva Advocacia ou Clínica Sorrisos" class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white placeholder-brand-textmuted/50 focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- WhatsApp -->
+                            <div>
+                                <label for="phone" class="block text-xs font-medium text-white mb-2">WhatsApp com DDD *</label>
+                                <input type="tel" id="phone" name="phone" required placeholder="(83) 98630-6588" class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white placeholder-brand-textmuted/50 focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors">
+                                <span class="text-[10px] text-red-400 hidden error-msg" id="phone-error">Informe um WhatsApp válido.</span>
+                            </div>
+
+                            <!-- E-mail -->
+                            <div>
+                                <label for="email" class="block text-xs font-medium text-white mb-2">E-mail (opcional)</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white placeholder-brand-textmuted/50 focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Segmento -->
+                            <div>
+                                <label for="segment" class="block text-xs font-medium text-white mb-2">Segmento profissional *</label>
+                                <select id="segment" name="segment" required class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors">
+                                    <option value="" disabled selected>Selecione seu nicho</option>
+                                    <option value="Advocacia">Advocacia / Jurídico</option>
+                                    <option value="Odontologia">Odontologia / Saúde</option>
+                                    <option value="Beleza">Beleza & Estética</option>
+                                    <option value="Outro">Outro segmento</option>
+                                </select>
+                            </div>
+
+                            <!-- Serviço Desejado -->
+                            <div>
+                                <label for="service" class="block text-xs font-medium text-white mb-2">Serviço desejado *</label>
+                                <select id="service" name="service" required class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors">
+                                    <option value="" disabled selected>O que você precisa?</option>
+                                    <option value="Criação de Landing Page">Criação de Landing Page</option>
+                                    <option value="Criação de Site Institucional">Criação de Site Institucional</option>
+                                    <option value="Manutenção de Site Existente">Manutenção de Site Existente</option>
+                                    <option value="Reformulação de Site">Reformulação de Site</option>
+                                    <option value="Preciso de Orientação">Ainda preciso de orientação</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Já possui site? -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label for="has-site" class="block text-xs font-medium text-white mb-2">Já possui um site?</label>
+                                <select id="has-site" name="has-site" class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors">
+                                    <option value="Não">Não, será o primeiro site</option>
+                                    <option value="Sim">Sim, já tenho um site</option>
+                                </select>
+                            </div>
+
+                            <div id="site-url-container" class="hidden">
+                                <label for="site-url" class="block text-xs font-medium text-white mb-2">Link do site atual</label>
+                                <input type="url" id="site-url" name="site-url" placeholder="https://seusite.com.br" class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white placeholder-brand-textmuted/50 focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors">
+                            </div>
+                        </div>
+
+                        <!-- Descrição -->
+                        <div>
+                            <label for="message" class="block text-xs font-medium text-white mb-2">Descrição do projeto ou dúvida</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Conte um pouco sobre o que busca alcançar com o site..." class="w-full bg-brand-black/70 border border-brand-darkmilitary rounded-lg px-4 py-3 text-xs text-white placeholder-brand-textmuted/50 focus:outline-none focus:border-brand-military focus:ring-1 focus:ring-brand-military transition-colors"></textarea>
+                        </div>
+
+                        <!-- Privacy Consent Checkbox -->
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" id="privacy-consent" required class="mt-0.5 rounded bg-brand-black border-brand-darkmilitary text-brand-military focus:ring-brand-military">
+                            <label for="privacy-consent" class="text-[11px] text-brand-textmuted leading-tight">
+                                Concordo em fornecer as informações acima para que a ADevWeb entre em contato a respeito do orçamento solicitado.
+                            </label>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-lg font-bold text-sm text-white bg-brand-military hover:bg-brand-darkmilitary border border-brand-military transition-all flex items-center justify-center gap-2 shadow-lg shadow-brand-military/20">
+                            <i data-lucide="send" class="w-4 h-4"></i>
+                            <span>Enviar via WhatsApp da ADevWeb</span>
+                        </button>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="bg-black border-t border-emerald-500/30 py-12 px-6">
-      <div class="max-w-6xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-8 mb-8 text-sm sm:text-base">
-          <div>
-            <h3 class="text-lg font-bold text-emerald-400 mb-4 uppercase tracking-wider">Adev Web</h3>
-            <p class="text-emerald-200/80 leading-relaxed">
-              Desenvolvimento de sites estratégicos focados em trazer mais clientes e faturamento para comércios e profissionais.
-            </p>
-          </div>
+    <footer class="bg-brand-black border-t border-brand-darkgray/80 py-12 text-xs text-brand-textmuted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="photos/photo-marca/marca-icon-100.jpeg" alt="ADevWeb Logo" class="w-8 h-8 rounded-lg object-cover border border-brand-military/40">
+                        <span class="text-lg font-bold text-white">ADev<span class="text-brand-military">Web</span></span>
+                    </div>
+                    <p class="text-brand-textmuted leading-relaxed">
+                        Criação de sites profissionais, landing pages e soluções digitais direcionadas para Advocacia, Odontologia e Estética.
+                    </p>
+                </div>
 
-          <div>
-            <h3 class="text-lg font-bold text-emerald-400 mb-4 uppercase tracking-wider">Diferenciais</h3>
-            <div class="space-y-2.5 text-emerald-200/80">
-              <p>⚡ Entrega Recorde (72h)</p>
-              <p>📱 Código Puro e Responsivo</p>
-              <p>❌ Sem mensalidades abusivas</p>
+                <div>
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-[11px]">Navegação</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="#projetos" class="hover:text-white transition-colors">Projetos em Destaque</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfólio por Nicho</a></li>
+                        <li><a href="#avaliacoes" class="hover:text-white transition-colors">Avaliações</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-[11px]">Nichos Atendidos</h3>
+                    <ul class="space-y-2">
+                        <li><span class="text-brand-textmuted">Advocacia e Escritórios Jurídicos</span></li>
+                        <li><span class="text-brand-textmuted">Odontologia e Consultórios</span></li>
+                        <li><span class="text-brand-textmuted">Salões, Estética e Lash Designers</span></li>
+                        <li><span class="text-brand-textmuted">Profissionais Autônomos</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-bold mb-4 uppercase tracking-wider text-[11px]">Contato & Redes</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="phone" class="w-4 h-4 text-brand-military"></i>
+                            <a href="https://wa.me/5583986306588" target="_blank" class="hover:text-white">(83) 98630-6588</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="instagram" class="w-4 h-4 text-brand-military"></i>
+                            <a href="https://www.instagram.com/adev.web/" target="_blank" rel="noopener noreferrer" class="hover:text-white">@adev.web</a>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
-          </div>
 
-          <div>
-            <h3 class="text-lg font-bold text-emerald-400 mb-4 uppercase tracking-wider">Contato Direto</h3>
-            <div class="flex gap-5">
-              <a href="https://www.instagram.com/adev.web/" target="_blank" rel="noopener noreferrer" class="text-2xl text-emerald-400 hover:text-emerald-300 transition-colors">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="https://wa.me/5583986306588" target="_blank" rel="noopener noreferrer" class="text-2xl text-emerald-400 hover:text-emerald-300 transition-colors">
-                <i class="fab fa-whatsapp"></i>
-              </a>
+            <div class="pt-8 border-t border-brand-darkgray/60 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                <p>&copy; 2026 ADevWeb — Todos os direitos reservados.</p>
+                <p>Desenvolvido com foco em alta conversão e presença digital.</p>
             </div>
-          </div>
         </div>
-
-        <div class="border-t border-emerald-500/10 pt-8 text-center text-emerald-400/60 text-xs sm:text-sm font-normal">
-          <p>&copy; 2026 Adev Web. Todos os direitos reservados.</p>
-        </div>
-      </div>
     </footer>
-  </body>
-  <script src="src/script.js"></script>
+
+    <!-- Floating WhatsApp Button -->
+    <a id="floating-whatsapp" href="https://wa.me/5583986306588?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20ADevWeb%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp" class="fixed bottom-6 right-6 z-40 bg-green-600 hover:bg-green-500 text-white p-3.5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center border border-white/20">
+        <i data-lucide="message-circle" class="w-6 h-6"></i>
+    </a>
+
+    <!-- Global Application Scripts -->
+    <script src="./src/script.js"></script>
+</body>
 </html>
