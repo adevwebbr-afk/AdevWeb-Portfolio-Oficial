@@ -32,7 +32,7 @@ const ADEVWEB_CONFIG = {
         "Site institucional para apresentar tratamentos odontológicos e facilitar agendamentos.",
       imageUrl:
         "https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=800&q=80",
-      targetUrl: "",
+      targetUrl: "atelie-odontologico.vercel.app",
       buttonText: "Ver projeto ao vivo",
       altText: "Demonstração de site para odontologia"
     },
