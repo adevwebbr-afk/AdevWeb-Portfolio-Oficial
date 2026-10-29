@@ -45,7 +45,7 @@ const ADEVWEB_CONFIG = {
         "Design elegante para salões, profissionais da beleza e clínicas de estética.",
       imageUrl:
         "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80",
-      targetUrl: "",
+      targetUrl: "https://mamma-pink-beleza.vercel.app/",
       buttonText: "Ver projeto ao vivo",
       altText: "Demonstração de site para beleza e estética"
     }
